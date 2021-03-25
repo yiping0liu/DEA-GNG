@@ -1,19 +1,14 @@
 function [Ruq,net] = ReferenceCombination(Ru,net)
 % Combine uniform reference vectors and nodes in GNG (Algorihtm 4)
 
+%------------------------------- Reference --------------------------------
+% Liu, Y., Ishibuchi, H., Masuyama, N. and Nojima, Y., 2020. Adapting 
+% reference vectors and scalarizing functions by growing neural gas to 
+% handle irregular Pareto fronts. IEEE Transactions on Evolutionary 
+% Computation, 24(3), pp.439-453.
 %--------------------------------------------------------------------------
-% Copyright 2018-2019 Yiping Liu
-% This is the code of DEA-GNG proposed in "Yiping Liu, Hisao Ishibuchi, 
-% Naoki Masuyama, and Yusuke Nojima, Adapting reference vectors and 
-% scalarizing functions by growing neural gas to handle irregular Pareto 
-% fronts, IEEE Transactions on Evolutionary Computation, 2019, Early 
-% Access, DOI: 10.1109/TEVC.2019.2926151".
+% Copyright Yiping Liu
 % Please contact {yiping0liu@gmail.com} if you have any problem.
-%--------------------------------------------------------------------------
-% This code uses PlatEMO published in "Ye Tian, Ran Cheng, Xingyi Zhang, 
-% and Yaochu Jin, PlatEMO: A MATLAB Platform for Evolutionary 
-% Multi-Objective Optimization [Educational Forum], IEEE Computational 
-% Intelligence Magazine, 2017, 12(4): 73-87".
 %--------------------------------------------------------------------------
 
     numNode = size(net.NodeS,1);    
